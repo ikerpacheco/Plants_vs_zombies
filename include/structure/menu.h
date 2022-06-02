@@ -23,6 +23,12 @@
         t_info *info;
         t_handbook *handbook;
         t_settings *settings;
+        sfSprite *duck;
+        sfTexture *duck_t;
+        sfIntRect rect;
+        sfSprite *duck_two;
+        sfTexture *duck_tw;
+        sfIntRect rect_two;
         int status;
     } t_menu;
 

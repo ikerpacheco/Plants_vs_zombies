@@ -14,11 +14,12 @@ void resume(t_game *game, sfEvent event)
     sfIntRect rect = (sfIntRect){pos.x, pos.y, 500 * 1.3, 80 * 1.3};
 
     if (event.type == sfEvtMouseButtonPressed &&
-    event.mouseButton.button == sfMouseLeft)
+    event.mouseButton.button == sfMouseLeft) {
         if (sfIntRect_contains(&rect, mouse.x, mouse.y)) {
             sfSound_play(game->sound->button);
             game->status = PLAY;
         }
+    }
 }
 
 void draw_text(t_game *game)
@@ -48,13 +49,14 @@ void main_menu(t_game *game, sfEvent event, t_menu *menu)
     sfIntRect rect = (sfIntRect){pos.x, pos.y, 500 * 1.3, 80 * 1.3};
 
     if (event.type == sfEvtMouseButtonPressed &&
-    event.mouseButton.button == sfMouseLeft)
+    event.mouseButton.button == sfMouseLeft) {
         if (sfIntRect_contains(&rect, mouse.x, mouse.y)) {
             sfSound_play(game->sound->button);
             sfMusic_stop(game->sound->game_music);
             sfMusic_play(game->sound->menu_music);
             game->status = MENU;
         }
+    }
 }
 
 void pause_exit(t_game *game, sfEvent event)
@@ -64,12 +66,13 @@ void pause_exit(t_game *game, sfEvent event)
     sfIntRect rect = (sfIntRect){pos.x, pos.y, 500 * 1.3, 80 * 1.3};
 
     if (event.type == sfEvtMouseButtonPressed &&
-    event.mouseButton.button == sfMouseLeft)
+    event.mouseButton.button == sfMouseLeft) {
         if (sfIntRect_contains(&rect, mouse.x, mouse.y)) {
             sfMusic_stop(game->sound->game_music);
             sfSound_play(game->sound->button);
             sfRenderWindow_close(game->window);
         }
+    }
 }
 
 void pause_events(t_game *game, t_menu *menu)

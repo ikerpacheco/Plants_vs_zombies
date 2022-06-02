@@ -56,9 +56,9 @@ void set_b_rects(t_positions *positions)
 t_positions *init_positions(void)
 {
     t_positions *positions = malloc(sizeof(t_positions));
+
     positions->map = malloc(sizeof(sfIntRect *) * 5);
     positions = allocate_mem(positions);
-
     positions->map[0][0] = (sfIntRect){0, 5, 220, 220};
     positions->map[0][1] = (sfIntRect){220, 5, 220, 220};
     positions->map[0][2] = (sfIntRect){436, 5, 220, 220};
@@ -68,7 +68,6 @@ t_positions *init_positions(void)
     positions->map[0][6] = (sfIntRect){1305, 5, 220, 220};
     positions->map[0][7] = (sfIntRect){1521, 5, 220, 220};
     positions->map[0][8] = (sfIntRect){1721, 5, 220, 220};
-
     set_b_rects(positions);
     set_c_rects(positions);
     set_d_rects(positions);

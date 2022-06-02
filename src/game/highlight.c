@@ -12,9 +12,9 @@ void check_selected(sfSprite *border, t_game *game, sfIntRect rect)
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f pos = sfSprite_getPosition(border);
 
-    if (sfIntRect_contains(&rect, mouse.x, mouse.y)) {
+    if (sfIntRect_contains(&rect, mouse.x, mouse.y))
         sfSprite_setTexture(border, game->borders->selected, sfTrue);
-    } else
+    else
         sfSprite_setTexture(border, game->borders->non_selected, sfTrue);
 }
 

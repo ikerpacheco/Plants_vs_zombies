@@ -5,10 +5,10 @@
 ** spawn.h
 */
 
+#include "../my.h"
+
 #ifndef SPAWNERS
     #define SPAWNERS
-
-    #include "../my.h"
 
     typedef struct s_spawners {
         sfTexture *spawner_t;

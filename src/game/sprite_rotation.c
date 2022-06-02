@@ -22,7 +22,6 @@ t_game *set_origins(t_game *game)
     sfSprite_setOrigin(game->spawners->spawner2, (sfVector2f){60, 60});
     sfSprite_setOrigin(game->spawners->spawner3, (sfVector2f){60, 60});
     sfSprite_setOrigin(game->spawners->spawner4, (sfVector2f){60, 60});
-
     return game;
 }
 
@@ -30,7 +29,6 @@ void sprite_rotation(t_game *game)
 {
     game = set_origins(game);
     game = rotate_enemies(game);
-
     if (game->counter1 != 1)
         sfSprite_rotate(game->spawners->spawner1, 0.5);
     if (game->counter2 != 1)

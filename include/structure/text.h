@@ -5,15 +5,16 @@
 ** TEXT.h
 */
 
+#include "../my.h"
+
 #ifndef TEXT
     #define TEXT
-
-    #include "../my.h"
 
     typedef struct s_text {
         sfText *gold;
         sfText *HP;
         sfText *rounds;
+        sfText *studio;
     } t_text;
 
 #endif /* !GAME */

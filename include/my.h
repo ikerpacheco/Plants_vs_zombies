@@ -8,7 +8,19 @@
 #ifndef MY_H_
     #define MY_H_
 
-    
+    #include <stdarg.h>
+    #include <stdlib.h>
+    #include <stdio.h>
+    #include <time.h>
+    #include <string.h>
+    #include <unistd.h>
+    #include <SFML/Audio.h>
+    #include <SFML/System.h>
+    #include <SFML/Graphics.h>
+    #include <SFML/System/Clock.h>
+    #include <SFML/Graphics/Texture.h>
+    #include <SFML/Graphics/Sprite.h>
+    #include <SFML/Graphics/RenderWindow.h>
 
     #include "structure/ammo.h"
     #include "structure/spawners.h"
@@ -39,8 +51,6 @@
     int my_arrstructlen(t_game *game);
 
     void generate_enemies(t_game *game, int num, int type);
-
-    t_game *destroy_enemy(t_game *game);
 
     t_pause *init_pause(void);
 
@@ -202,6 +212,8 @@
     int usage(int ac, char **av);
 
     int my_strlen(char const *str);
+
+    void change_clock(sfClock *clock, t_menu *menu);
 
     t_menu *init_menu(void);
 

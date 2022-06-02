@@ -22,12 +22,12 @@ void set_spawners(t_spawners *spawners)
 t_spawners *init_spawners(void)
 {
     t_spawners *spawners = malloc(sizeof(t_spawners));
+
     spawners->spawner1 = sfSprite_create();
     spawners->spawner2 = sfSprite_create();
     spawners->spawner3 = sfSprite_create();
     spawners->spawner4 = sfSprite_create();
     spawners->spawner_t = sfTexture_createFromFile("media/spawner.png", NULL);
-
     sfSprite_setTexture(spawners->spawner1, spawners->spawner_t, sfTrue);
     sfSprite_setTexture(spawners->spawner2, spawners->spawner_t, sfTrue);
     sfSprite_setTexture(spawners->spawner3, spawners->spawner_t, sfTrue);

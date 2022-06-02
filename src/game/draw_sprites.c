@@ -27,9 +27,10 @@ void draw_enemies(t_game *game)
     int i = 0;
 
     while (i < game->e_counter) {
-        if (game->e_array[i]->status == 0)
+        if (game->e_array[i]->status == 0) {
             sfRenderWindow_drawSprite
             (game->window, game->e_array[i]->enemy, NULL);
+        }
         i++;
     }
 }

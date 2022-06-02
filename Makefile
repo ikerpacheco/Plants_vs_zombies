@@ -34,6 +34,7 @@ SRC	=	src/my_defender.c	\
 		src/menu/event.c	\
 		src/menu/fps_handle.c	\
 		src/menu/get_handbook.c	\
+		src/menu/move_rect.c	\
 		src/menu/get_settings.c	\
 		src/menu/manage_buttons.c	\
 		src/menu/menu.c	\
@@ -46,8 +47,7 @@ SRC	=	src/my_defender.c	\
 		src/game/highlight.c \
 		src/game/get_play.c	\
 		src/game/sprite_movement.c \
-		src/game/map_events.c \
-		src/game/destroy_enemies.c
+		src/game/map_events.c
 
 OBJ	=	$(SRC:.c=.o)
 

@@ -19,7 +19,7 @@ void more_init(t_game *game)
     game->round = 0;
     game->e_counter = 0;
     game->counter = 0;
-    game->HP = 4;
+    game->HP = 20;
     game->path = NULL;
     game->rect = (sfFloatRect){0, 0, 0, 0};
     game->ammo = NULL;
